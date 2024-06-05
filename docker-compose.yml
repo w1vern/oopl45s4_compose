@@ -9,6 +9,8 @@ services:
     shm_size: 128mb
     environment:
       POSTGRES_PASSWORD: abobus123
+    volumes:
+      - ./database:/var/lib/postgresql/data
 
   nginx:
     depends_on:
