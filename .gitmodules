@@ -1,0 +1,6 @@
+[submodule "oopl45s4_back"]
+	path = oopl45s4_back
+	url = https://github.com/w1vern/oopl45s4_back
+[submodule "oopl45s4_front"]
+	path = oopl45s4_front
+	url = https://github.com/w1vern/oopl45s4_front
