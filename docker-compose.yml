@@ -2,6 +2,14 @@ version: "3.3"
 # Указываем раздел со связанными сервисами
 
 services:
+
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: abobus123
+
   nginx:
     depends_on:
       - frontend
@@ -23,8 +31,12 @@ services:
     restart: always
 
   backend:
+    depends_on:
+      - db
     build: ./oopl45s4_back
     expose:
       - '8080'
     restart: always
+    volumes:
+      - ./appsettings.json:/app/appsettings.json
 
